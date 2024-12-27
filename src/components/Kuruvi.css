@@ -1,0 +1,133 @@
+/* Chatbot window styling */
+.kuruvi-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.3s ease-in-out;
+  }
+  
+  .chat-header {
+    text-align: center;
+    cursor: pointer;
+    background-color: #1DA1F2;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .chat-header h3 {
+    margin: 0;
+  }
+  
+  .chat-window {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .messages {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message {
+    margin: 5px 0;
+  }
+  
+  .message.user {
+    align-self: flex-end;
+    background-color: #1DA1F2;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+    max-width: 75%;
+  }
+  
+  .message.bot {
+    align-self: flex-start;
+    background-color: #ddd;
+    color: black;
+    border-radius: 5px;
+    padding: 8px;
+    max-width: 75%;
+  }
+  
+  .chat-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .chat-input input {
+    width: 100%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .chat-input button {
+    background-color: #1DA1F2;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Toggle button styling */
+  .chat-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #000000;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 15px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .chat-toggle-btn:hover {
+    background-color: #007bb5;
+  }
+  
+  .chat-toggle-btn.close-btn {
+    background-color: #ff3b30;
+  }
+  
+  .chat-toggle-btn.close-btn:hover {
+    background-color: #cc2d26;
+  }
+  
+  /* Animation for chat window */
+  @keyframes slideIn {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
